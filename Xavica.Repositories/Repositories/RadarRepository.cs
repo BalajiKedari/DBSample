@@ -25,7 +25,6 @@ namespace TechRadar.DataLayer.Repositories
 
         public async Task<bool> DeleteAsync(object key)
         {
-
             using (Context)
             {
 

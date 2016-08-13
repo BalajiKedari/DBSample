@@ -8,5 +8,9 @@ namespace TechRadar.DataLayer.Interfaces
 {
     public interface IProgramRepository: IRepository<ProgramEntity>
     {
+
+
+
+
     }
 }

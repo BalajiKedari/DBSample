@@ -75,7 +75,7 @@ namespace TechRadar.DataLayer.Repositories
 
                                 radar.Technologies = radarTechnologies.Where(item => item.RadarId ==radar.Id).ToList();
 
-                            }
+                        }
                         
                         }
 
@@ -119,6 +119,7 @@ namespace TechRadar.DataLayer.Repositories
                             return true;
                         }
                         else {
+
                             return false;
                         }
 

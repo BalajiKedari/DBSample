@@ -20,8 +20,6 @@ namespace Xavica.Repositories.Tests
             var result=await repository.InsertAsync(entity);
             await  repository.DeleteAsync(entity.Id);
             Assert.IsTrue(result == true, "Insereted");
-
-
         }
         [TestMethod]
         public async Task  GetAllTest()
@@ -32,8 +30,6 @@ namespace Xavica.Repositories.Tests
             await repository.InsertAsync(entity);
             var lstcompanies=  await repository.GetAllAsync();
            // Assert.IsTrue(lstcompanies. > 0, "GetAll");
-
-
         }
 
         [TestMethod]

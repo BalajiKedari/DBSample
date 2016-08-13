@@ -12,7 +12,10 @@ namespace xavica.TechRadar.WebAPI.Controllers
     {
         public CompanyController() {
 
-  }
+    }
+
+
+
 
 
         

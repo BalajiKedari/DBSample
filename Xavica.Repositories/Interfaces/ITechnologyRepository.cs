@@ -8,5 +8,8 @@ namespace TechRadar.DataLayer.Interfaces
 {
     public interface ITechnologyRepository : IRepository<TechnologyEntity>
     {
+
+
+
     }
 }

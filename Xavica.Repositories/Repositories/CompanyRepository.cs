@@ -96,7 +96,7 @@ namespace TechRadar.DataLayer.Repositories
 
                                 }
 
-                            }
+                         }
 
                             company.Programs = programs.Where(item => item.companyId == company.Id).ToList();
 

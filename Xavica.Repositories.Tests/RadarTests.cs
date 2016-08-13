@@ -17,7 +17,7 @@ namespace Xavica.Repositories.Tests
         {
             IDBContext context = new DBContext(ConfigurationManager.ConnectionStrings["mcs"].ConnectionString);
             IRadarRepository radarRepository = new RadarRepository(context);
-            RadarEntity entity = new RadarEntity() { Name = "Radar7" };
+            RadarEntity entity = new RadarEntity() { Name = "Radar7",CompanyId=1,ProjectId=1 };
             var result=await radarRepository.InsertAsync(entity);
             await radarRepository.DeleteAsync(entity.Id);
             Assert.IsTrue(result == true, "inserted");
@@ -29,7 +29,7 @@ namespace Xavica.Repositories.Tests
         {
             IDBContext context = new DBContext(ConfigurationManager.ConnectionStrings["mcs"].ConnectionString);
             IRadarRepository radarRepository = new RadarRepository(context);
-           RadarEntity entity = new RadarEntity() { Name = "Radar8" };
+           RadarEntity entity = new RadarEntity() { Name = "Radar8", ProgramId = 2, ProjectId = 1};
            await radarRepository.InsertAsync(entity);
             var lstradars=await radarRepository.GetAllAsync();
          
@@ -42,10 +42,9 @@ namespace Xavica.Repositories.Tests
 
             IDBContext context = new DBContext(ConfigurationManager.ConnectionStrings["mcs"].ConnectionString);
             IRadarRepository radarRepository = new RadarRepository(context);
-            RadarEntity entity = new RadarEntity() { Id=2,Name = "Radar9" };
+            RadarEntity entity = new RadarEntity() { Id=2,Name = "Radar9", CompanyId = 2, ProjectId = 1 };
             var result=await radarRepository.UpdateAsync(entity);
             Assert.IsTrue(result == true, "updated");
-
         }
 
         [TestMethod]
@@ -53,7 +52,7 @@ namespace Xavica.Repositories.Tests
         {
             IDBContext context = new DBContext(ConfigurationManager.ConnectionStrings["mcs"].ConnectionString);
             IRadarRepository radarRepository = new RadarRepository(context);
-            RadarEntity entity = new RadarEntity() {Name = "radar10" };
+            RadarEntity entity = new RadarEntity() {Name = "radar10", ProgramId = 3, ProjectId = 1 };
             await radarRepository.InsertAsync(entity);
             var result= await radarRepository.DeleteAsync(entity.Id);
             Assert.IsTrue(result == true, "deleted");
