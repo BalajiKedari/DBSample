@@ -136,7 +136,7 @@ namespace TechRadar.DataLayer.Repositories
 
                         var result = false;
                         StringBuilder sb = new StringBuilder();
-                        sb.Append("update radar set Name=@Name where Id=@Id");
+                        sb.Append("update radar set Name=@Name,companyId=@companyId,programId=@programId,projectId=@projectId where Id=@Id");
                         var record = this.Context.DB.Execute(sb.ToString(), instance);
                         if (record > 0)
                         {

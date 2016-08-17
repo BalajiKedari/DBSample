@@ -185,7 +185,7 @@ namespace TechRadar.DataLayer.Repositories
 
                          var result = false;
                          StringBuilder sb = new StringBuilder();
-                         sb.Append("update program set Name=@Name where Id=@Id");
+                         sb.Append("update program set Name=@Name,companyid=@companyId where Id=@Id");
                          var record = this.Context.DB.Execute(sb.ToString(), instance);
                          if (record > 0)
                          {

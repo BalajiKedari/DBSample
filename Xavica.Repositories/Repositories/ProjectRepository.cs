@@ -143,7 +143,7 @@ namespace TechRadar.DataLayer.Repositories
                     {
                         var reslut = false;
                         StringBuilder sb = new StringBuilder();
-                        sb.Append("update project set Name=@Name where Id=@Id");
+                        sb.Append("update project set Name=@Name,companyId=@companyId,programId=@programId where Id=@Id");
                         var record = this.Context.DB.Execute(sb.ToString(), instance);
                         if (record > 0)
                         {
